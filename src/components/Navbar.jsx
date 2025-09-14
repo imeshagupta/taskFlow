@@ -4,6 +4,7 @@ import IconImg from "../assets/icon.jpg";
 import { ThemeContext } from "./ThemeContext";
 import { CiLight } from "react-icons/ci";
 import { MdLightMode } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -34,13 +35,13 @@ function Navbar() {
       <div className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
         <ul>
           <li className={styles.listItem}>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className={styles.listItem}>
-            <a href="/about">About</a>
+            <Link tof="/about">About</Link>
           </li>
           <li className={styles.listItem}>
-            <a href="/contact">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </div>

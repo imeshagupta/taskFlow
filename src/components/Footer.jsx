@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import styles from "../styles/Footer.module.css";
 import { ThemeContext } from "./ThemeContext";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const { theme } = useContext(ThemeContext);
@@ -11,33 +12,33 @@ function Footer() {
       <div className={styles.footerLinks}>
         <ul>
           <li className={styles.listItem}>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className={styles.listItem}>
-            <a href="/about">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li className={styles.listItem}>
-            <a href="/contact">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </div>
       <div className={styles.socialMedia}>
-        <a
-          href="https://gmail.com"
+        <Link
+          to="https://gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
         >
           Gmail
-        </a>
-        <a
-          href="https://instagram.com"
+        </Link>
+        <Link
+          to="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
         >
           Instagram
-        </a>
+        </Link>
         <span className={styles.phone}>📞 +91 9999999999</span>
       </div>
     </footer>
