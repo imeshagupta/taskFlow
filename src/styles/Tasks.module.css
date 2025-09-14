@@ -1,0 +1,238 @@
+.container {
+  background-color: #032806;
+  color: white;
+  min-height: 80vh;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.container.light {
+  background-color: #f5f8f5;
+  color: #1a1a1a;
+}
+.container.light .TasksList li {
+  background-color: #ffffff;
+  color: #222;
+}
+.container.dark {
+  background-color: #032806;
+  color: white;
+}
+.container.dark .TasksList li {
+  background-color: #054c10;
+  color: white;
+}
+
+.headingWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 600px;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: bold;
+  align-items: center;
+}
+
+.addTaskBtn {
+  background-color: #9be121;
+  color: #032806;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto 20px auto;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  cursor: pointer;
+  max-width: 180px;
+  justify-content: center;
+}
+.addTaskBtn:hover {
+  background-color: #b5f230;
+}
+
+.TasksList {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.TasksList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #054c10;
+  padding: 12px 20px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.taskInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.taskButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.TasksList li button {
+  background: none;
+  border: none;
+  color: #9be121;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.TasksList li button:hover {
+  color: #b5f230;
+}
+
+.TasksList .badge {
+  background-color: #9be121;
+  color: #032806;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.priorityOption {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.priorityRadio {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #054c10;
+  position: relative;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.priorityRadio:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: #054c10;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.priorityLabel {
+  font-weight: 500;
+  user-select: none;
+  font-size: 1rem;
+}
+
+.modal-content {
+  background-color: #054c10;
+  color: white;
+  border-radius: 10px;
+}
+.modal-header,
+.modal-footer {
+  border-color: #032806;
+}
+.btn-close {
+  filter: invert(1);
+}
+.saveBtn,
+.updateBtn,
+.confirmBtn {
+  background-color: #054c10;
+  color: #cbff70;
+  border: none;
+}
+.saveBtn:hover,
+.updateBtn:hover,
+.confirmBtn:hover {
+  background-color: #9be121;
+  color: #054c10;
+}
+.form-control {
+  background-color: #054c10;
+  color: white;
+  border: 1px solid #9be121;
+}
+.form-control:focus {
+  border-color: #b5f230;
+  box-shadow: none;
+}
+.dropdown-menu {
+  background-color: #054c10;
+  color: white;
+}
+.dropdown-item {
+  color: white;
+}
+.dropdown-item:hover {
+  background-color: #032806;
+  color: #9be121;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+  }
+
+  .TasksList li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .taskButtons {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .addTaskBtn {
+    max-width: 160px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .TasksList li {
+    padding: 10px 15px;
+  }
+
+  .taskButtons button {
+    font-size: 0.95rem;
+  }
+}

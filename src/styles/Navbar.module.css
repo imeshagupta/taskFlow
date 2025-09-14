@@ -1,0 +1,159 @@
+.navbar {
+  background-color: #032806;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo h1 {
+  font-size: clamp(18px, 3vw, 22px);
+  font-weight: 600;
+  margin: 0;
+  color: inherit;
+}
+.iconImg {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #9be121;
+}
+
+.navLinks ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navLinks a {
+  text-decoration: none;
+  color: inherit;
+  font-size: clamp(14px, 2.5vw, 16px);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.navLinks a:hover {
+  color: #9be121;
+}
+
+.themeBtn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #9be121;
+  color: #032806;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.themeBtn:hover {
+  background-color: #7db31b;
+  transform: scale(1.05);
+}
+
+.desktopTheme {
+  display: inline-block;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: currentColor;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.mobileControls {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar.dark {
+  background-color: #032806;
+  color: white;
+}
+.navbar.light {
+  background-color: white;
+  color: #032806;
+}
+.navbar.light .themeBtn {
+  background-color: #032806;
+  color: white;
+}
+.navbar.light .themeBtn:hover {
+  background-color: #054c10;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+    width: 100%;
+  }
+  .navLinks.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: inherit;
+    margin-top: 5px;
+    width: 100%;
+    padding-right: 20px;
+  }
+  .navLinks ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .navLinks li a {
+    display: block;
+    width: max-content;
+    padding: 8px 0;
+    text-align: center;
+  }
+
+  .mobileControls {
+    display: flex;
+  }
+
+  .desktopTheme {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .navLinks {
+    display: block;
+  }
+  .hamburger {
+    display: none;
+  }
+  .mobileControls {
+    display: none;
+  }
+  .desktopTheme {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,133 @@
+.section {
+  width: 100%;
+  background-color: #032806;
+  padding: 60px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: inherit;
+  box-sizing: border-box;
+}
+
+.section.light {
+  background-color: #f5f8f5;
+}
+
+.section.light .container {
+  background-color: #ffffff;
+}
+
+.section.dark {
+  background-color: #032806;
+  color: #f5f5f5;
+}
+
+.section.dark .container {
+  background-color: #0b5a12;
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin-bottom: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-weight: 600;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.input,
+.textarea {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.section.dark .input,
+.section.dark .textarea {
+  background-color: #daffbd;
+  border: 1px solid #555555;
+  color: #f5f5f5;
+}
+
+.section.light .input,
+.section.light .textarea {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #9be121;
+  box-shadow: 0 0 4px rgba(155, 225, 33, 0.6);
+}
+
+.submitBtn {
+  padding: 12px 18px;
+  background-color: #9be121;
+  color: #032806;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: #b5f230;
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 25px;
+  }
+  .form {
+    gap: 15px;
+  }
+  .submitBtn {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 15px;
+  }
+  .title {
+    font-size: 1.4rem;
+  }
+  .submitBtn {
+    width: 100%;
+    padding: 12px;
+  }
+}
